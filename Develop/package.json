@@ -1,0 +1,14 @@
+{
+  "name": "automated_readme_generator",
+  "version": "1.0.0",
+  "description": "Automatically generate a readme file for your homework!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}

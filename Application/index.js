@@ -1,8 +1,10 @@
-
+//call inquirer so we can prompt questions, fs for writing the file, and the generateMarkdown file
 var inquirer = require("inquirer");
 var fs = require ("fs");
 const generateMarkdown = require("./utils/generateMarkdown")
 
+
+//ask the appropriate questions
 inquirer.prompt([
     {
       type: "input",

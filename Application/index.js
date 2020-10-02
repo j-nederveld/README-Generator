@@ -1,6 +1,7 @@
 
 var inquirer = require("inquirer");
 var fs = require ("fs");
+const generateMarkdown = require("./utils/generateMarkdown")
 
 inquirer.prompt([
     {
@@ -16,12 +17,22 @@ inquirer.prompt([
     {
       type: "input",
       message: "What is your project's name?",
-      name: "projectname"
+      name: "title"
+    },
+    {
+      type: "input",
+      message: "What is your GitHub repository called?",
+      name: "reponame"
     },
     {
       type: "input",
       message: "Please write a short description of your project:",
       name: "description"
+    },
+    {
+      type: "input",
+      message: "List any collaborators you wish to credit (include their GitHub user info):",
+      name: "credits"
     },
     {
       type: "list",
@@ -57,11 +68,14 @@ inquirer.prompt([
   .then(function(response) {
  console.log(response);
 
+    const generatedFile = generateMarkdown(response)
+
+    console.log(generatedFile);
     //create the file (.split and .join take out the spaces if they entered first/lastname or something)
-    // fs.writeFile(fileName, JSON.stringify(response, null, "\t"), (err) => {
-    //    if (err){
-    //      return console.log(err);
-    //    }
-    //    console.log("File written!");
-    //  });
+    fs.writeFile("README.md", generatedFile, (err) => {
+        if (err){
+          return console.log(err);
+        }
+        console.log("File written!");
+      });
    });

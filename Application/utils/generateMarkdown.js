@@ -28,9 +28,9 @@ ${data.userinfo}
 ${data.credits}
 
 ## License
-\`
-${data.license}
-\`
+
+![Picture of ${data.license}](https://img.shields.io/badge/license-${data.license}-blue.svg)
+
 ---
 
 ## Badges

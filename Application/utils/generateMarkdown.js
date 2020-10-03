@@ -29,7 +29,7 @@ ${data.credits}
 
 ## License
 
-![Picture of ${data.license}](https://img.shields.io/badge/license-${data.license}-blue.svg)
+![Picture of license](https://img.shields.io/badge/license-${data.license}-blue.svg)
 
 ---
 

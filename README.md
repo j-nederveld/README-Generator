@@ -27,7 +27,7 @@ When you are ready to create a README file, run `node index.js` in the Applicati
 
 ## License
 
- ![Picture of ${answers.license}](https://img.shields.io/badge/license-MIT-blue.svg)
+ ![Picture of license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ---
 
